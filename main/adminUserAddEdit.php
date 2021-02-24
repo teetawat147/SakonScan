@@ -22,7 +22,7 @@ include("../include/connection.php");
 <body>
     <fieldset id="userRegister" style="display:block;">
         <div class = "container">
-       
+        <br>       
           <center><h3>ลงทะเบียนผู้ใช้งาน</h3></center>
     <form class="form" action="userRegisterInsert.php" method="POST">
         <input type="hidden" name="lineId" id="lineId" value="<?php echo (isset($_GET['lineId']))?$_GET['lineId']:"";?>" >
