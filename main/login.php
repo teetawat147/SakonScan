@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
 include("../include/connection.php");
-?>
+?> -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -47,13 +47,13 @@ include("../include/connection.php");
             <br>
             <div class="text-center col-12" style="display: inline-block;" >
                 <button type="submit" class="btn btn-primary" >ตกลง</button>
-                <button type="cancel" class="btn btn-primary" >ยกเลิก</button>
+                <button type="cancel" class="btn btn-secondary" >ยกเลิก</button>
             </div>
             <br>
             <center>
             <br>
-                <a href="../main/userRegister.php">สมัครเข้าใช้งาน</a>
-                <label for="password">ลืมรหัสผ่าน</label>
+            <a href="../main/adminUserAddEdit.php">สมัครเข้าใช้งาน</a>
+            <a href="../main/forgetPassword.php">ลืมรหัสผ่าน</a>
             </center>
         </div>  
         
@@ -69,31 +69,31 @@ include("../include/connection.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="../js/bootstrap-validate.js"></script>
+    <!-- <script src="../js/bootstrap-validate.js"></script> -->
     <script>
-        $(function() {
-        console.log($('form'));
-        $('form').validator({
-            validHandlers: {
-                '.customhandler':function(input) {
-                    //may do some formatting before validating
-                    input.val(input.val().toUpperCase());
-                    //return true if valid
-                    return input.val() === 'JQUERY' ? true : false;
-                }
-            }
-        });
+    //     $(function() {
+    //     console.log($('form'));
+    //     $('form').validator({
+    //         validHandlers: {
+    //             '.customhandler':function(input) {
+    //                 //may do some formatting before validating
+    //                 input.val(input.val().toUpperCase());
+    //                 //return true if valid
+    //                 return input.val() === 'JQUERY' ? true : false;
+    //             }
+    //         }
+    //     });
 
-        $('form').submit(function(e) {
+    //     $('form').submit(function(e) {
 
-            if ($('form').validator('check') < 1) {
-                // alert('Hurray, your information will be saved!');
-            }else{
-                e.preventDefault();
-                return false;
-            }
-        })
-    })
+    //         if ($('form').validator('check') < 1) {
+    //             // alert('Hurray, your information will be saved!');
+    //         }else{
+    //             e.preventDefault();
+    //             return false;
+    //         }
+    //     })
+    // })
     </script>
 
   </body>

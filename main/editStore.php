@@ -4,7 +4,7 @@ include("../include/connection.php");
 <!doctype html>
 <html lang="en">
 <head>
-    <title>adminUserAddEdit</title>
+    <title>editStore</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,24 +20,24 @@ include("../include/connection.php");
 
 </head>
 <body>
-    <fieldset id="userRegister" style="display:block;">
+    <fieldset id="editStore" style="display:block;">
         <div class = "container">
         <br>       
-          <center><h3>ลงทะเบียนผู้ใช้งาน</h3></center>
-    <form class="form" action="userRegisterInsert.php" method="POST">
+        <h3>แก้ไขสถานประกอบการ</h3><br>
+    <form class="form" action="" method="POST">
         <input type="hidden" name="lineId" id="lineId" value="<?php echo (isset($_GET['lineId']))?$_GET['lineId']:"";?>" >
         
         <div class="form-row">
             <div class="form-group col-md-12">
-                <label for="cid">เลขบัตรประจำตัวประชาชน</label>
-                <input name="cid" id="cid" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเลขบัตรประจำตัวประชาชน">
+                <label for="storeName">ชื่อสถานประกอบการ</label>
+                <input name="storeName" id="storeName" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกชื่อสถานประกอบการ">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="fname">ชื่อ</label>
-                <input name="fname" id="fname" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกชื่อ">
+                <label for="fname">ชื่อเจ้าของสถานประกอบการ</label>
+                <input name="fname" id="fname" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกชื่อเจ้าของสถานประกอบการ">
             </div>
         
 
@@ -51,47 +51,39 @@ include("../include/connection.php");
 
         <div class="form-row">    
             <div class="form-group col-md-12">
-                <label for="phone">เบอร์โทรศัพท์</label>
-                <input name="phone" id="phone" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเบอร์โทรศัพท์">
+                <label for="cid">เลขบัตรประจำตัวประชาชน</label>
+                <input name="cid" id="cid" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเลขบัตรประจำตัวประชาชน">
                 
             </div>
         </div>
 
         <div class="form-row">    
             <div class="form-group col-md-6">
-                <label for="Username">Username</label>
-                <input name="Username" id="Username" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Username">
+                <label for="address">ที่อยู่</label>
+                <input name="address" id="address" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกที่อยู่">
                 
             </div>
 
             <div class="form-group col-md-6">
-                <label for="Password">Password</label>
-                <input name="Password" id="Password" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">
-                
+                <label for="changwat">จังหวัด</label>
+                <select name="changwat" id="changwat" class="form-control">
+                    <option selected>Choose...</option>
+                </select>
             </div>
-
         </div>
 
         <div class="form-row"> 
             <div class="form-group col-md-6">
-                <label for="office">ชื่อหน่วยงาน</label>
-                <select id="office" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>หน่วยงาน A</option>
-                    <option>หน่วยงาน B</option>
-                    <option>หน่วยงาน C</option>
-                    <option>หน่วยงาน D</option>
-                </select>
-            </div>
+                    <label for="ampur">อำเภอ</label>
+                    <select name="ampur" id="ampur" class="form-control">
+                        <option selected>Choose...</option>
+                    </select>
+                </div>
 
-            <div class="form-group col-md-6">
-                <label for="position">ตำแหน่ง</label>
-                <select id="position" class="form-control">
+                <div class="form-group col-md-6">
+                <label for="tambon">ตำบล</label>
+                <select name="tambon" id="tambon" class="form-control">
                     <option selected>Choose...</option>
-                    <option>ตำแหน่ง A</option>
-                    <option>ตำแหน่ง B</option>
-                    <option>ตำแหน่ง C</option>
-                    <option>ตำแหน่ง D</option>
                 </select>
             </div>
         </div>
@@ -102,6 +94,16 @@ include("../include/connection.php");
                 <input name="email" id="email" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Email">
             </div>
         </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="type">ประเภทสถานประกอบการ</label>
+                <select name="type" id="type" class="form-control">
+                    <option selected>Choose...</option>
+                </select>
+            </div>
+                                
+        </div><br>
 
             <center>
             <a class="btn btn-secondary" href="../main/login.php" role="button">ยกเลิก</a>
