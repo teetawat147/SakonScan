@@ -19,6 +19,7 @@
         echo $e -> getMessage();
     }
 
+    // test connection db
     // $sql = "SELECT * FROM ampur47";
     // $result = $conn -> prepare($sql);
     // $result -> execute();
