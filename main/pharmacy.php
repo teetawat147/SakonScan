@@ -4,7 +4,7 @@ include("../include/connection.php");
 <!doctype html>
 <html lang="en">
 <head>
-    <title>cosmetics</title>
+    <title>pharmacy</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,12 +17,13 @@ include("../include/connection.php");
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
 </head>
 <body>
-    <fieldset id="cosmetics" style="display:block;">
+    <fieldset id="drugSet" style="display:block;">
         <div class = "container"><br>              
-        <h3>เครื่องสำอาง</h3>
+        <h3>ยา (ผลิตภัณฑ์)</h3>
     <form class="form" action="userRegisterInsert.php" method="POST">
         <input type="hidden" name="lineId" id="lineId" value="<?php echo (isset($_GET['lineId']))?$_GET['lineId']:"";?>" >
         
@@ -30,10 +31,10 @@ include("../include/connection.php");
             <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon2">
 
             <div class="input-group-prepend">
-            <div class="input-group-text" id="btnGroupAddon2"><i class="fa fa-adjust"></i></div>
+            <div class="input-group-text" id="btnGroupAddon2" style="cursor: pointer;"><i class="fas fa-search"></i></div>
             </div>
-        </div>
-        
+        </div><br>
+
         <div class="form-row">
             <div class="form-group col-md-12">
                 <label for="cosmeticsName">ชื่อเครื่องสำอาง</label>
@@ -106,75 +107,58 @@ include("../include/connection.php");
     <script src ="https://www.jquery-az.com/boots/js/validate-bootstrap/validate-bootstrap.jquery.min.js" ></script>
 
 
-    <script>
-        $(function(){
-            $("#btnGroupAddon2").click(function(){
-                alert("aaaaaa");
-                $.ajax({
-                    method: "POST",
-                    url: "getAmpur.php",
-                    data: { provinceCode: provinceCode}
-                }).done(function( msg ) {
-                    $("#div-districtCode").html(msg);
-                    let tambonmsg= '<label for="subdistrictCode">ตำบล</label>';
-                        tambonmsg+='<select name="subdistrictCode" id="subdistrictCode" class="form-control" required data-error-msg="กรุณากรอกชื่อตำบล">';
-                        tambonmsg+='<option selected disabled>Choose...</option>';
-                        tambonmsg+='</select>';            
-                    $("#div-subdistrictCode").html(tambonmsg);                   
-                });
-            })
-        })
+    <!-- <script>
+        var settings = {
+            "url": "http://porta.fda.moph.go.th/FDA_SEARCH_ALL/WS_LICENSE_SEARCH.asmx?WSDL",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "text/xml",
+                header('Access-Control-Allow-Origin: *')
+            },
+            "data": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \r\nxmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \r\nxmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n    <soap:Body>\r\n        <GET_DATA_ALL xmlns=\"http://tempuri.org/\">\r\n            <DATAS>1016200023984</DATAS>\r\n        </GET_DATA_ALL>\r\n    </soap:Body>\r\n</soap:Envelope>",
+        };
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        }); -->
+
+        // $(function(){
+        //     $("#btnGroupAddon2").click(function(){
+        //         alert("aaaaaa");
+        //         $.ajax({
+        //             method: "POST",
+        //             url: "getAmpur.php",
+        //             data: { provinceCode: provinceCode}
+        //         }).done(function( msg ) {
+        //             $("#div-districtCode").html(msg);
+        //             let tambonmsg= '<label for="subdistrictCode">ตำบล</label>';
+        //                 tambonmsg+='<select name="subdistrictCode" id="subdistrictCode" class="form-control" required data-error-msg="กรุณากรอกชื่อตำบล">';
+        //                 tambonmsg+='<option selected disabled>Choose...</option>';
+        //                 tambonmsg+='</select>';            
+        //             $("#div-subdistrictCode").html(tambonmsg);
+        //         });
+        //     })
+        // })
+
+
+        
+    // var settings = {
+    //     "url": "http://porta.fda.moph.go.th/FDA_SEARCH_ALL/WS_LICENSE_SEARCH.asmx?WSDL",
+    //     "method": "POST",
+    //     "timeout": 0,
+    //     "headers": {
+    //         "Content-Type": "text/xml",
+    //         "Cookie": "cookiesession1=678B769A89012BEILORVYBEFGHIJE48F"
+    // },
+    //   "data": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \r\nxmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \r\nxmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n    <soap:Body>\r\n        <GET_DATA_ALL xmlns=\"http://tempuri.org/\">\r\n            <DATAS>1016200023984</DATAS>\r\n        </GET_DATA_ALL>\r\n    </soap:Body>\r\n</soap:Envelope>",
+    // };
+
+    // $.ajax(settings).done(function (response) {
+    //   console.log(response);
+    // });
+
     </script>
 
 
-
-
-
-    <!-- <script>
-        $(function(){
-            $("#provinceCode").change(function(){
-                let provinceCode = $(this).val();
-                // alert(provinceCode);
-                $.ajax({
-                    method: "POST",
-                    url: "getAmpur.php",
-                    data: { provinceCode: provinceCode}
-                }).done(function( msg ) {
-                    $("#div-districtCode").html(msg);
-                    let tambonmsg= '<label for="subdistrictCode">ตำบล</label>';
-                        tambonmsg+='<select name="subdistrictCode" id="subdistrictCode" class="form-control" required data-error-msg="กรุณากรอกชื่อตำบล">';
-                        tambonmsg+='<option selected disabled>Choose...</option>';
-                        tambonmsg+='</select>';            
-                    $("#div-subdistrictCode").html(tambonmsg);                   
-                });
-            })
-            $("#div-districtCode").on("change","#districtCode",function(){              
-                let districtCode = $(this).val();
-                let provinceCode = $("#provinceCode").val();
-                $.ajax({
-                    method: "POST",
-                    url: "getTambon.php",
-                    data: { provinceCode: provinceCode, districtCode:districtCode }
-                }).done(function( msg ) {
-                    $("#div-subdistrictCode").html(msg);
-                    
-                });
-            })
-        });
-
-        $(function(){
-            $("#officeId").change(function() {               
-                let officeId = $(this).val();                 
-                $.ajax({
-                    method: "POST",
-                    url: "getDepartment.php",
-                    data: { officeId: officeId}
-                }).done(function(msg) {
-                    // alert(msg);
-                    $("#departmentId").html(msg);                                  
-                });
-            })
-        });
-    </script> -->
   </body>
 </html>
