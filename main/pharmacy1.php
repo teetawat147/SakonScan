@@ -50,7 +50,7 @@ include("../include/connection.php");
 
         <div id="regNo" class="form-row">   
             <div class="form-group col-md-12">
-                <label for="regNoId">2. เลขทะเบียนยาที่แสดงในฉลาก</label>
+                <label for="regNoId">2. เลขทะเบียนยาที่แสดงในฉลาก</label>&nbsp&nbsp
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="regNoId" id="regNo" value="1" required data-error-msg="กรุณาเลือกข้อมูล">
                     <label class="form-check-label" for="inlineRadio3">มี</label>&nbsp&nbsp&nbsp
@@ -70,7 +70,21 @@ include("../include/connection.php");
                 </div>
             </div>
         </div>
-        
+
+        <div id="regNo" class="form-row">   
+            <div class="form-group col-md-12">
+                <label for="regNoId">5. วันหมดอายุ</label>&nbsp&nbsp
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="regNoId" id="regNo" value="1" required data-error-msg="กรุณาเลือกข้อมูล">
+                    <label class="form-check-label" for="inlineRadio3">มี</label>&nbsp&nbsp&nbsp
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="regNoId" > 
+
+                    <input style ="margin-left: 30px;" class="form-check-input" type="radio" name="regNoId" id="regNo" value="2" required data-error-msg="กรุณาเลือกข้อมูล">
+                    <label class="form-check-label" for="inlineRadio4">ไม่มี</label>
+                </div>
+            </div>
+        </div>
+
     
             <center>
             <a class="btn btn-secondary" href="../main/login.php" role="button">ยกเลิก</a>
