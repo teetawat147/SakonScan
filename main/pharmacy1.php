@@ -21,7 +21,7 @@ include("../include/connection.php");
 
 </head>
 <body>
-    <fieldset id="cosmetics" style="display:block;">
+    <fieldset id="drugSet" style="display:block;">
         <div class = "container"><br>              
         <h3>ยา (ผลิตภัณฑ์)</h3>
     <form class="form" action="userRegisterInsert.php" method="POST">
