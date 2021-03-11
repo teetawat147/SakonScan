@@ -35,102 +35,42 @@ include("../include/connection.php");
             </div>
         </div><br>
         
-        <div id="drugSet" class="form-row">
+        <div id="drugSet" class="form-row">   
             <div class="form-group col-md-12">
-                <label for="drugSet">1. เป็นยาชุดหรือไม่</label><br>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline1" name="drugSet" value="1" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline1">ใช่</label>
-                </div>
-
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline2" name="drugSet" value="2" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline2">ไม่ใช่</label>
-                </div>
-            </div>
-        </div>
-
-        <div id="11" class="form-row">
-            <div class="form-group col-md-12">
-                <label for="cosmeticsName">2. เลขทะเบียนยาที่แสดงในฉลาก</label><br>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="11" name="11" value="1" class="custom-control-input">
-                    <label class="custom-control-label" for="11">มี</label>
-                </div>
-
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="11" name="11" value="2" class="custom-control-input">
-                    <label class="custom-control-label" for="11">ไม่มี</label>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-row">   
-            <div class="form-group col-md-12">
-                <label for="smokeId">คุณเป็นโรคความดันโลหิตใช่หรือไม่</label>
+                <label for="drugSetId">1. เป็นยาชุดหรือไม่</label>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="bloodId" id="bloodId" value="1" required data-error-msg="กรุณาเลือกข้อมูล">
+                    <input class="form-check-input" type="radio" name="drugSetId" id="drugSet" value="1" required data-error-msg="กรุณาเลือกข้อมูล">
                     <label class="form-check-label" for="inlineRadio3">ใช่</label>
-                
-                <!-- <div class="form-check form-check-inline"> -->
-                    <input style ="margin-left: 30px;" class="form-check-input" type="radio" name="bloodId" id="bloodId" value="2" required data-error-msg="กรุณาเลือกข้อมูล">
+            
+                    <input style ="margin-left: 30px;" class="form-check-input" type="radio" name="drugSetId" id="drugSet" value="2" required data-error-msg="กรุณาเลือกข้อมูล">
                     <label class="form-check-label" for="inlineRadio4">ไม่ใช่</label>
                 </div>
             </div>
         </div>        
 
+        <div id="regNo" class="form-row">   
+            <div class="form-group col-md-12">
+                <label for="regNoId">2. เลขทะเบียนยาที่แสดงในฉลาก</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="regNoId" id="regNo" value="1" required data-error-msg="กรุณาเลือกข้อมูล">
+                    <label class="form-check-label" for="inlineRadio3">มี</label>&nbsp&nbsp&nbsp
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="regNoId" > 
+
+                    <input style ="margin-left: 30px;" class="form-check-input" type="radio" name="regNoId" id="regNo" value="2" required data-error-msg="กรุณาเลือกข้อมูล">
+                    <label class="form-check-label" for="inlineRadio4">ไม่มี</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="regNo" class="form-row">   
+            <div class="form-group col-md-12">
+                <label for="regNoId">3. ชื่อทางการค้า</label>&nbsp&nbsp&nbsp
+                <div class="form-check form-check-inline">
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="regNoId" > 
+                </div>
+            </div>
+        </div>
         
-
-
-
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="tradeName">การค้า</label>
-                <input name="tradeName" id="tradeName" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกชื่อ">
-            </div>
-
-            <div class="form-group col-md-6">
-                <label for="fname">วิธีการใช้</label>
-                <input name="fname" id="fname" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกชื่อ">
-            </div>
-        </div>
-
-        <div class="form-row">    
-            <div class="form-group col-md-6">
-                <label for="warning">คำเตือน ±</label>
-                <input name="warning" id="warning" class="form-control" min="3"  type="text" data-error-msg="กรุณากรอกนามสกุล">
-            </div>
-        
-            <div class="form-group col-md-6">
-                <label for="ingredient">ส่วนประกอบ</label>
-                <input name="ingredient" id="ingredient" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเบอร์โทรศัพท์">
-            </div>
-        </div>
-
-        <div class="form-row">    
-            <div class="form-group col-md-6">
-                <label for="quantity">ปริมาณ</label>
-                <input name="quantity" id="quantity" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเบอร์โทรศัพท์">
-            </div>
-
-            <div class="form-group col-md-6">
-                <label for="Manufacturer">ผู้ผลิต/นำเข้า</label>
-                <input name="Manufacturer" id="Manufacturer" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Username">
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="MFG">วันที่ผลิต</label>
-                <input name="MFG" id="MFG" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
-            </div>
-
-            <div class="form-group col-md-6">
-                <label for="registrationNumber">เลขที่จดแจ้ง</label>
-                <input name="registrationNumber" id="registrationNumber" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">
-            </div>
-        </div><br>
-
     
             <center>
             <a class="btn btn-secondary" href="../main/login.php" role="button">ยกเลิก</a>
@@ -148,20 +88,20 @@ include("../include/connection.php");
     <script src ="https://www.jquery-az.com/boots/js/validate-bootstrap/validate-bootstrap.jquery.min.js" ></script>
 
 
-    <!-- <script>
-        var settings = {
-            "url": "http://porta.fda.moph.go.th/FDA_SEARCH_ALL/WS_LICENSE_SEARCH.asmx?WSDL",
-            "method": "POST",
-            "timeout": 0,
-            "headers": {
-                "Content-Type": "text/xml",
-                header('Access-Control-Allow-Origin: *')
-            },
-            "data": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \r\nxmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \r\nxmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n    <soap:Body>\r\n        <GET_DATA_ALL xmlns=\"http://tempuri.org/\">\r\n            <DATAS>1016200023984</DATAS>\r\n        </GET_DATA_ALL>\r\n    </soap:Body>\r\n</soap:Envelope>",
-        };
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-        }); -->
+    <script>
+        // var settings = {
+        //     "url": "http://porta.fda.moph.go.th/FDA_SEARCH_ALL/WS_LICENSE_SEARCH.asmx?WSDL",
+        //     "method": "POST",
+        //     "timeout": 0,
+        //     "headers": {
+        //         "Content-Type": "text/xml",
+        //         header('Access-Control-Allow-Origin: *')
+        //     },
+        //     "data": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \r\nxmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" \r\nxmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n    <soap:Body>\r\n        <GET_DATA_ALL xmlns=\"http://tempuri.org/\">\r\n            <DATAS>1016200023984</DATAS>\r\n        </GET_DATA_ALL>\r\n    </soap:Body>\r\n</soap:Envelope>",
+        // };
+        // $.ajax(settings).done(function (response) {
+        //     console.log(response);
+        // });
 
         // $(function(){
         //     $("#btnGroupAddon2").click(function(){
