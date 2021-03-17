@@ -15,7 +15,7 @@ curl_setopt_array($curl, array(
 <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
   <soap:Body>
     <GET_DATA_DRUG xmlns="http://tempuri.org/">
-      <DATAS>'.$_POST['Newcode'].'</DATAS>
+      <DATAS>'.$_POST['searchCode'].'</DATAS>
     </GET_DATA_DRUG>
   </soap:Body>
 </soap:Envelope>',
