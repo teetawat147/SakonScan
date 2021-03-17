@@ -19,12 +19,4 @@
         echo $e -> getMessage();
     }
 
-    // test connection db
-    // $sql = "SELECT * FROM ampur47";
-    // $result = $conn -> prepare($sql);
-    // $result -> execute();
-    // $rowsAmpur = $result -> fetchAll(PDO::FETCH_ASSOC);
-
-    // print_r($rowsAmpur);
-
     ?>
