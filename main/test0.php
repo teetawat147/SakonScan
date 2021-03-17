@@ -14,9 +14,9 @@ curl_setopt_array($curl, array(
   CURLOPT_POSTFIELDS =>'<?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
   <soap:Body>
-    <GET_DRUG_INFORMATION xmlns="http://tempuri.org/">
+    <GET_DATA_DRUG xmlns="http://tempuri.org/">
       <DATAS>'.$_POST['Newcode'].'</DATAS>
-    </GET_DRUG_INFORMATION>
+    </GET_DATA_DRUG>
   </soap:Body>
 </soap:Envelope>',
   CURLOPT_HTTPHEADER => array(
@@ -29,3 +29,7 @@ $response = curl_exec($curl);
 
 curl_close($curl);
 echo $response;
+// print_r($response);
+
+// $xml=simplexml_load_string($response);
+// print_r($xml);
