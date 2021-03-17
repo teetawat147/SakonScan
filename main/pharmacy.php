@@ -25,7 +25,7 @@ include("../include/connection.php");
 <body>
     <fieldset id="drugSet" style="display:block;">
         <div class = "container"><br>              
-        <h3>ยา (ผลิตภัณฑ์)</h3>
+        <h3>ยา (ผลิตภัณฑ์)</h3><br>
     <form class="form" action="userRegisterInsert.php" method="POST">
         <div class="input-group">
             <input id="searchCode" type="text" class="form-control" placeholder="ค้นหาเลขทะเบียนตำรับยา" aria-label="เลขทะเบียนตำรับยา" aria-describedby="btnGroupAddon2">
@@ -97,8 +97,36 @@ include("../include/connection.php");
 
         <div class="form-row">
             <div class="form-group col-md-12">
+                <label for="....">กลุ่มตำรับยา </label>
+                <input name="...." id="...." class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
                 <label for="indication">ข้อบ่งใช้ </label>
                 <input name="indication" id="indication" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="....">ส่วนประกอบสารสำคัญต่อหน่วย </label>
+                <input name="...." id="...." class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="....">ข้อมูลยาสัตว์ </label>
+                <input name="...." id="...." class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="....">ข้อห้ามใช้ </label>
+                <input name="...." id="...." class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
             </div>
         </div>
 
@@ -135,18 +163,35 @@ include("../include/connection.php");
 
         <div class="form-row">
             <div class="form-group col-md-6">
+                <label for="....">รายละเอียดผู้ผลิต</label>
+                <input name="...." id="...." class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="....">ชื่อผู้แทนจำหน่าย</label>
+                <input name="...." id="...." class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="....">เหตุผลที่ยกเลิกคำขอ </label>
+                <input name="...." id="...." class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="....">วันที่ยกเลิก</label>
+                <input name="...." id="...." class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+
+            <div class="form-group col-md-6">
                 <label for="lmdfdate">ข้อมูล ณ วันที่</label>
                 <input name="lmdfdate" id="lmdfdate" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
             </div>
+        </div><br>
 
-            <!-- <div class="form-group col-md-6">
-                <label for="cncnm">สถานะทะเบียน</label>
-                <input name="cncnm" id="cncnm" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">
-            </div> -->
-        </div>
-
-
-    
             <center>
             <a class="btn btn-secondary" href="../main/login.php" role="button">ยกเลิก</a>
             <button type="button" class="btn btn-primary">ถัดไป</button>                
