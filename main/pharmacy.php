@@ -28,7 +28,7 @@ include("../include/connection.php");
         <h3>ยา (ผลิตภัณฑ์)</h3>
     <form class="form" action="userRegisterInsert.php" method="POST">
         <div class="input-group">
-            <input id="searchCode" type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon2">
+            <input id="searchCode" type="text" class="form-control" placeholder="ค้นหาเลขทะเบียนตำรับยา" aria-label="เลขทะเบียนตำรับยา" aria-describedby="btnGroupAddon2">
 
             <div class="input-group-prepend">
             <div class="input-group-text" id="btnGroupAddon2" style="cursor: pointer;"><i class="fas fa-search"></i></div>
@@ -36,59 +36,115 @@ include("../include/connection.php");
         </div><br>
 
         <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="cosmeticsName">ชื่อเครื่องสำอาง</label>
-                <input name="cosmeticsName" id="cosmeticsName" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเลขบัตรประจำตัวประชาชน">
+            <div class="form-group col-md-6">
+                <label for="thadrgnm">ชื่อทางการค้าไทย</label>
+                <input name="thadrgnm" id="thadrgnm" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเลขบัตรประจำตัวประชาชน">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="engdrgnm">ชื่อทางการค้าอังกฤษ</label>
+                <input name="engdrgnm" id="engdrgnm" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเลขบัตรประจำตัวประชาชน">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="tradeName">การค้า</label>
-                <input name="tradeName" id="tradeName" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกชื่อ">
+                <label for="appdate_th">วันที่อนุมัติ </label>
+                <input name="appdate_th" id="appdate_th" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกชื่อ">
             </div>
 
             <div class="form-group col-md-6">
-                <label for="fname">วิธีการใช้</label>
-                <input name="fname" id="fname" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกชื่อ">
+                <label for="expdate">วันที่หมดอายุ</label>
+                <input name="expdate" id="expdate" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกชื่อ">
             </div>
         </div>
 
         <div class="form-row">    
             <div class="form-group col-md-6">
-                <label for="warning">คำเตือน ±</label>
-                <input name="warning" id="warning" class="form-control" min="3"  type="text" data-error-msg="กรุณากรอกนามสกุล">
+                <label for="ctgthanm">หมวดยา</label>
+                <input name="ctgthanm" id="ctgthanm" class="form-control" min="3"  type="text" data-error-msg="กรุณากรอกนามสกุล">
             </div>
         
             <div class="form-group col-md-6">
-                <label for="ingredient">ส่วนประกอบ</label>
-                <input name="ingredient" id="ingredient" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเบอร์โทรศัพท์">
+                <label for="thadsgnm">รูปแบบยา (ไทย)</label>
+                <input name="thadsgnm" id="thadsgnm" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเบอร์โทรศัพท์">
             </div>
         </div>
 
         <div class="form-row">    
             <div class="form-group col-md-6">
-                <label for="quantity">ปริมาณ</label>
-                <input name="quantity" id="quantity" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเบอร์โทรศัพท์">
+                <label for="engdsgnm">รูปแบบยา (อังกฤษ)</label>
+                <input name="engdsgnm" id="engdsgnm" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอกเบอร์โทรศัพท์">
             </div>
 
             <div class="form-group col-md-6">
-                <label for="Manufacturer">ผู้ผลิต/นำเข้า</label>
-                <input name="Manufacturer" id="Manufacturer" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Username">
+                <label for="thaclassnm">ประเภทของยา</label>
+                <input name="thaclassnm" id="thaclassnm" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Username">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="MFG">วันที่ผลิต</label>
-                <input name="MFG" id="MFG" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+                <label for="thakindnm">ประเภทของยาควบคุมตามกฏหมาย </label>
+                <input name="thakindnm" id="thakindnm" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
             </div>
 
             <div class="form-group col-md-6">
-                <label for="registrationNumber">เลขที่จดแจ้ง</label>
-                <input name="registrationNumber" id="registrationNumber" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">
+                <label for="lcnno_no">เลขที่ใบอนุญาต </label>
+                <input name="lcnno_no" id="lcnno_no" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
             </div>
-        </div><br>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="indication">ข้อบ่งใช้ </label>
+                <input name="indication" id="indication" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="licen_loca">ชื่อผู้รับอนุญาต </label>
+                <input name="licen_loca" id="licen_loca" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="thanm">ชื่อสถานที่</label>
+                <input name="thanm" id="thanm" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="fulladdr">ที่ตั้ง </label>
+                <input name="fulladdr" id="fulladdr" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Newcode_U">เลขอ้างอิงสำหรับ License per Invoice</label>
+                <input name="Newcode_U" id="Newcode_U" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="cncnm">สถานะทะเบียน</label>
+                <input name="cncnm" id="cncnm" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="lmdfdate">ข้อมูล ณ วันที่</label>
+                <input name="lmdfdate" id="lmdfdate" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">    
+            </div>
+
+            <!-- <div class="form-group col-md-6">
+                <label for="cncnm">สถานะทะเบียน</label>
+                <input name="cncnm" id="cncnm" class="form-control" min="3" required type="text" data-error-msg="กรุณากรอก Password">
+            </div> -->
+        </div>
+
 
     
             <center>
@@ -153,7 +209,11 @@ include("../include/connection.php");
                         console.log(xmlDoc.getElementsByTagName("XML_SEARCH_DRUG_DR")[0]);
                         var thisValue = xmlDoc.getElementsByTagName("XML_SEARCH_DRUG_DR")[0];
                         console.log(thisValue.getElementsByTagName("thadrgnm")[0].innerHTML);
-                        $("#cosmeticsName").val(thisValue.getElementsByTagName("thadrgnm")[0].innerHTML);
+                        $("#thadrgnm").val(thisValue.getElementsByTagName("thadrgnm")[0].innerHTML);
+
+                        console.log(thisValue.getElementsByTagName("engdrgnm")[0].innerHTML);
+                        $("#engdrgnm").val(thisValue.getElementsByTagName("engdrgnm")[0].innerHTML);
+                        
                         // var xmlDoc = msg.responseXML;
                         // console.log(xmlDoc)
                         // var x = xmlDoc.getElementsByTagName('lcnno')[0];
