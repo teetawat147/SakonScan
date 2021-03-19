@@ -33,7 +33,7 @@
 
                 <div id="drugSet" class="form-row">   
                     <div class="form-group col-md-12">
-                        <label for="drugSetId">1. เป็นยาชุดหรือไม่</label>
+                        <label for="drugSetId">เป็นยาชุดหรือไม่</label>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="drugSetId" id="drugSet" value="1" required data-error-msg="กรุณาเลือกข้อมูล">
                             <label class="form-check-label" for="inlineRadio3">ใช่</label>
@@ -42,11 +42,35 @@
                             <label class="form-check-label" for="inlineRadio4">ไม่ใช่</label>
                         </div>
                     </div>
-                </div>        
+                </div>  
+
+                <div class="form-row">
+                    <div class="form-group col-2">
+                        <input name="cncnm" id="cncnm" min="1" class="form-control" type="text">
+                    </div>
+
+                    <div class="form-group col-2">
+                        <input name="cncnm" id="cncnm" class="form-control" type="text">
+                    </div>
+
+                    <div class="form-group col-2">
+                        <input name="cncnm" id="cncnm"  class="form-control" type="text">
+                    </div>
+                    <div class="form-group col-2">
+                    <label for=".....">  <h4>/25   <h4></label>
+                    </div>
+                    <div class="form-group col-2">
+                        <input name="cncnm" id="cncnm"  class="form-control" type="text">
+                    </div>
+
+                    <div class="form-group col-2"><button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button></div>
+
+
+                </div>
+                     
 
                 <div class="input-group">
                     <input id="searchCode" type="text" class="form-control" placeholder="ค้นหาเลขทะเบียนตำรับยา" aria-label="เลขทะเบียนตำรับยา" aria-describedby="btnGroupAddon2">
-
                     <div class="input-group-prepend">
                     <div class="input-group-text" id="btnGroupAddon2" style="cursor: pointer;"><i class="fas fa-search"></i></div>
                     </div>
