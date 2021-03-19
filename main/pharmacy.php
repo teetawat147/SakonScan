@@ -11,12 +11,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
-    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -28,7 +26,7 @@
 
 </head>
 <body>
-    <fieldset id="drugSet" style="display:block;">
+    <fieldset id="drugSet">
         <div class = "container"><br>
         <h3>ยา (ผลิตภัณฑ์)</h3><br>
             <form class="form" action="userRegisterInsert.php" method="POST">
@@ -54,7 +52,7 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="appdate_th">วันที่อนุมัติ </label>
+                        <label for="appdate_th">วันที่อนุมัติ</label>
                         <input name="appdate_th" id="appdate_th" class="form-control" type="text">
                     </div>
 
@@ -90,47 +88,70 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="thakindnm">ประเภทของยาควบคุมตามกฏหมาย </label>
+                        <label for="thakindnm">ประเภทของยาควบคุมตามกฏหมาย</label>
                         <input name="thakindnm" id="thakindnm" class="form-control" type="text">
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="lcnno_no">เลขที่ใบอนุญาต </label>
+                        <label for="lcnno_no">เลขที่ใบอนุญาต</label>
                         <input name="lcnno_no" id="lcnno_no" class="form-control" type="text">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="atcnm">กลุ่มตำรับยา </label>
+                        <label for="atcnm">กลุ่มตำรับยา</label>
                         <input name="atcnm" id="atcnm" class="form-control" type="text">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="indication">ข้อบ่งใช้ </label>
+                        <label for="indication">ข้อบ่งใช้</label>
                         <textarea name="indication" id="indication" rows="3" class="form-control"></textarea>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="thadrgnm">ส่วนประกอบสารสำคัญต่อหน่วย </label>
-                        <input name="thadrgnm" id="thadrgnm" class="form-control" type="text">
+                        <label for="iow">ส่วนประกอบสารสำคัญต่อหน่วย</label>
+                        <input name="iow" id="iow" class="form-control" type="text">
                     </div>
                 </div>
 
+                <h4>ข้อมูลยาสัตว์</h4>
                 <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="amltpnm">ข้อมูลยาสัตว์ </label>
+                    <div class="form-group col-md-6">
+                        <label for="amltpnm">ประเภทสัตว์</label>
                         <input name="amltpnm" id="amltpnm" class="form-control" type="text">
                     </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="amlsubnm">ชนิดสัตว์</label>
+                        <input type="text" name="amlsubnm" id="amlsubnm" class="form-control">
+                    </div>
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="cncnote">ข้อห้ามใช้ </label>
+                    <div class="form-group col-md-6">
+                        <label for="usetpnm">การใช้</label>
+                        <input type="text" name="usetpnm" id="usetpnm" class="form-control">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="stpdrg">ระยะหยุดยา</label>
+                        <input type="text" name="stpdrg" id="stpdrg" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="packuse">ขนาดและวิธีการใช้</label>
+                        <input type="text" name="packuse" id="packuse" class="form-control">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="cncnote">ข้อห้ามใช้</label>
                         <input name="cncnote" id="cncnote" class="form-control" type="text">
                     </div>
                 </div>
@@ -180,7 +201,7 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="cnccsnm">เหตุผลที่ยกเลิกคำขอ </label>
+                        <label for="cnccsnm">เหตุผลที่ยกเลิกคำขอ</label>
                         <input name="cnccsnm" id="cnccsnm" class="form-control" type="text">
                     </div>
                 </div>
@@ -203,6 +224,27 @@
                     </center>
             </form>
         </div>
+
+        <div class="modal fade" id="searchFail" tabindex="-1" role="dialog" aria-labelledby="searchFailLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchFailLabel">แจ้งเตือน</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">เลขทะเบียนไม่ถูกต้อง!!!</p>
+                    <p class="text-center">กรุณาตรวจสอบเลขทะเบียน และกรอกใหม่อีกครั้ง</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
     </fieldset>
     
 
@@ -226,21 +268,19 @@
                     // console.log(xmlDoc.getElementsByTagName("Table1")[0]);
                     var thisValue = xmlDoc.getElementsByTagName("Table1")[0];
                     // console.log(thisValue.getElementsByTagName("Newcode")[0].innerHTML);
-                    var Newcode=thisValue.getElementsByTagName("Newcode")[0].innerHTML;
-
-
+                    var Newcode = thisValue.getElementsByTagName("Newcode")[0].innerHTML;
 
                     $.ajax({
                         method: "POST",
                         url: "pharmacyNewcode.php",
                         data: { Newcode: Newcode}
                     }).done(function( msg ) {
-                        var parser,xmlDoc;
+                        var parser, xmlDoc;
                         parser=new DOMParser();
-                        xmlDoc=parser.parseFromString(msg,"text/xml");
+                        xmlDoc=parser.parseFromString(msg, "text/xml");
                         // console.log(xmlDoc);
 
-                        console.log(xmlDoc.getElementsByTagName("XML_SEARCH_DRUG_DR")[0]);
+                        // console.log(xmlDoc.getElementsByTagName("XML_SEARCH_DRUG_DR")[0]);
                         var thisValue = xmlDoc.getElementsByTagName("XML_SEARCH_DRUG_DR")[0];
                         // console.log(thisValue.getElementsByTagName("thadrgnm")[0].innerHTML);
                         $("#thadrgnm").val(thisValue.getElementsByTagName("thadrgnm")[0].innerHTML);
@@ -253,10 +293,14 @@
                         $("#thaclassnm").val(thisValue.getElementsByTagName("thaclassnm")[0].innerHTML);
                         $("#thakindnm").val(thisValue.getElementsByTagName("thakindnm")[0].innerHTML);
                         $("#lcnno_no").val(thisValue.getElementsByTagName("lcnno_no")[0].innerHTML);
-                        $("#atcnm").val(thisValue.getElementsByTagName("atcnm")[0].innerHTML);
+                        $("#atcnm").val(thisValue.getElementsByTagName("atcnm").innerHTML);
                         $("#indication").val(thisValue.getElementsByTagName("indication")[0].innerHTML);
-                        $("#thadrgnm").val(thisValue.getElementsByTagName("thadrgnm")[0].innerHTML);
-                        $("#amltpnm").val(thisValue.getElementsByTagName("amltpnm")[0].innerHTML);
+                        $("#iow").val("1/1 1 หน่วย คือ " + thisValue.getElementsByTagName("drgperunit") !== null ? thisValue.getElementsByTagName("drgperunit")[0].innerHTML : " " + " " + thisValue.getElementsByTagName("iowanm") !== null ? thisValue.getElementsByTagName("iowanm")[0].innerHTML : " " + " ปริมาณ/หน่วย " + thisValue.getElementsByTagName("qtytxt_all") !== null ? thisValue.getElementsByTagName("qtytxt_all")[0].innerHTML : " ");
+                        $("#amltpnm").val(thisValue.getElementsByTagName("amltpnm").innerHTML);
+                        $("#amlsubnm").val(thisValue.getElementsByTagName("amlsubnm").innerHTML);
+                        $("#usetpnm").val(thisValue.getElementsByTagName("usetpnm").innerHTML);
+                        $("#stpdrg").val(thisValue.getElementsByTagName("stpdrg").innerHTML);
+                        $("#packuse").val(thisValue.getElementsByTagName("packuse").innerHTML);
                         $("#cncnote").val(thisValue.getElementsByTagName("cncnote")[0].innerHTML);
                         $("#licen_loca").val(thisValue.getElementsByTagName("licen_loca")[0].innerHTML);
                         $("#thanm").val(thisValue.getElementsByTagName("thanm")[0].innerHTML);
@@ -267,28 +311,12 @@
                         $("#thanm").val(thisValue.getElementsByTagName("thanm")[0].innerHTML);
                         $("#cnccsnm").val(thisValue.getElementsByTagName("cnccsnm")[0].innerHTML);
                         $("#cncdate_th").val(thisValue.getElementsByTagName("cncdate_th")[0].innerHTML);
-                        $("#lmdfdate").val(thisValue.getElementsByTagName("lmdfdate")[0].innerHTML);
-
-                        // var xmlDoc = msg.responseXML;
-                        // console.log(xmlDoc)
-                        // var x = xmlDoc.getElementsByTagName('lcnno')[0];
-                        // var y = x.childNodes[0];
-                        // $("#div-districtCode").html(msg);
-                        // let tambonmsg= '<label for="subdistrictCode">ตำบล</label>';
-                        //     tambonmsg+='<select name="subdistrictCode" id="subdistrictCode" class="form-control" required data-error-msg="กรุณากรอกชื่อตำบล">';
-                        //     tambonmsg+='<option selected disabled>Choose...</option>';
-                        //     tambonmsg+='</select>';
-                        // $("#div-subdistrictCode").html(tambonmsg);
+                        $("#lmdfdate").val(thisValue.getElementsByTagName("lmdfdate")[0].innerHTML);      
                     });
-
-
-
-
                 });
-
-
             })
         })
+
 
     </script>
 
