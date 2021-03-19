@@ -30,6 +30,20 @@
         <div class = "container"><br>
         <h3>ยา (ผลิตภัณฑ์)</h3><br>
             <form class="form" action="userRegisterInsert.php" method="POST">
+
+                <div id="drugSet" class="form-row">   
+                    <div class="form-group col-md-12">
+                        <label for="drugSetId">1. เป็นยาชุดหรือไม่</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="drugSetId" id="drugSet" value="1" required data-error-msg="กรุณาเลือกข้อมูล">
+                            <label class="form-check-label" for="inlineRadio3">ใช่</label>
+                    
+                            <input style ="margin-left: 30px;" class="form-check-input" type="radio" name="drugSetId" id="drugSet" value="2" required data-error-msg="กรุณาเลือกข้อมูล">
+                            <label class="form-check-label" for="inlineRadio4">ไม่ใช่</label>
+                        </div>
+                    </div>
+                </div>        
+
                 <div class="input-group">
                     <input id="searchCode" type="text" class="form-control" placeholder="ค้นหาเลขทะเบียนตำรับยา" aria-label="เลขทะเบียนตำรับยา" aria-describedby="btnGroupAddon2">
 
@@ -37,6 +51,14 @@
                     <div class="input-group-text" id="btnGroupAddon2" style="cursor: pointer;"><i class="fas fa-search"></i></div>
                     </div>
                 </div><br>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="cncnm">สถานะทะเบียน</label>
+                        <input name="cncnm" id="cncnm" class="form-control" type="text">
+                    </div>
+                </div>
+
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -47,18 +69,6 @@
                     <div class="form-group col-md-6">
                         <label for="engdrgnm">ชื่อทางการค้าอังกฤษ</label>
                         <input name="engdrgnm" id="engdrgnm" class="form-control" type="text">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="appdate_th">วันที่อนุมัติ</label>
-                        <input name="appdate_th" id="appdate_th" class="form-control" type="text">
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label for="expdate">วันที่หมดอายุ</label>
-                        <input name="expdate" id="expdate" class="form-control" type="text">
                     </div>
                 </div>
 
@@ -87,18 +97,25 @@
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-9">
                         <label for="thakindnm">ประเภทของยาควบคุมตามกฏหมาย</label>
                         <input name="thakindnm" id="thakindnm" class="form-control" type="text">
                     </div>
 
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-3">
+                            <label for="exampleFormControlFile1">แนปรูปภาพยา</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
                         <label for="lcnno_no">เลขที่ใบอนุญาต</label>
                         <input name="lcnno_no" id="lcnno_no" class="form-control" type="text">
                     </div>
                 </div>
 
-                <div class="form-row">
+                <!-- <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="atcnm">กลุ่มตำรับยา</label>
                         <input name="atcnm" id="atcnm" class="form-control" type="text">
@@ -110,16 +127,16 @@
                         <label for="indication">ข้อบ่งใช้</label>
                         <textarea name="indication" id="indication" rows="3" class="form-control"></textarea>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="form-row">
+                <!-- <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="iow">ส่วนประกอบสารสำคัญต่อหน่วย</label>
                         <input name="iow" id="iow" class="form-control" type="text">
                     </div>
-                </div>
+                </div> -->
 
-                <h4>ข้อมูลยาสัตว์</h4>
+                <!-- <h4>ข้อมูลยาสัตว์</h4>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="amltpnm">ประเภทสัตว์</label>
@@ -154,7 +171,7 @@
                         <label for="cncnote">ข้อห้ามใช้</label>
                         <input name="cncnote" id="cncnote" class="form-control" type="text">
                     </div>
-                </div>
+                </div> -->
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -171,35 +188,24 @@
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="fulladdr">ที่ตั้ง </label>
-                        <input name="fulladdr" id="fulladdr" class="form-control" type="text">
+                        <textarea name="fulladdr" id="fulladdr" rows="3" class="form-control"></textarea>
                     </div>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="Newcode_U">เลขอ้างอิงสำหรับ License per Invoice</label>
-                        <input name="Newcode_U" id="Newcode_U" class="form-control" type="text">
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label for="cncnm">สถานะทะเบียน</label>
-                        <input name="cncnm" id="cncnm" class="form-control" type="text">
-                    </div>
-                </div>
 
                 <div class="form-row">
-                    <div class="form-group col-md-6">
+                    <!-- <div class="form-group col-md-6">
                         <label for="licen_loca">รายละเอียดผู้ผลิต</label>
                         <input name="licen_loca" id="licen_loca" class="form-control" type="text">
-                    </div>
+                    </div> -->
 
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-12">
                         <label for="thanm">ชื่อผู้แทนจำหน่าย</label>
                         <input name="thanm" id="thanm" class="form-control" type="text">
                     </div>
                 </div>
 
-                <div class="form-row">
+                <!-- <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="cnccsnm">เหตุผลที่ยกเลิกคำขอ</label>
                         <input name="cnccsnm" id="cnccsnm" class="form-control" type="text">
@@ -207,16 +213,11 @@
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-12">
                         <label for="cncdate_th">วันที่ยกเลิก</label>
                         <input name="cncdate_th" id="cncdate_th" class="form-control" type="text">
                     </div>
-
-                    <div class="form-group col-md-6">
-                        <label for="lmdfdate">ข้อมูล ณ วันที่</label>
-                        <input name="lmdfdate" id="lmdfdate" class="form-control" type="text">
-                    </div>
-                </div><br>
+                </div><br> -->
 
                     <center>
                     <a class="btn btn-secondary" href="../main/login.php" role="button">ยกเลิก</a>
