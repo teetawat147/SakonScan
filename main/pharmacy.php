@@ -22,6 +22,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
     <style>
+
+        @media only screen and (max-width: 768px) {
+            .attach-img-drug,
+            .type-drug {
+                width: 50%;
+            }
+
+            #attachImgDrug {
+                margin-top: 28px;
+            }
+        }
+
     </style>
 
 </head>
@@ -42,44 +54,26 @@
                             <label class="form-check-label" for="inlineRadio4">ไม่ใช่</label>
                         </div>
                     </div>
-                </div>  
-
-                <div class="form-row">
-                    <div class="form-group col-2">
-                        <input name="" id=""  class="form-control" type="number">
-                    </div>
-
-                    <div class="form-group col-2">
-                        <input name="" id="" class="form-control" type="text">
-                    </div>
-
-                    <div class="form-group col-2">
-                        <input name="" id=""  class="form-control" type="number">
-                    </div>
-                    <div class="form-group col-2">
-                    <label for="....."><h4>/25<h4></label>
-                    </div>
-                    <div class="form-group col-2">
-                        <input name="" id=""  class="form-control" type="number">
-                    </div>
-
-                    <div class="form-group col-2"><button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button></div>
-
-
-                </div>
-                     
+                </div>                       
 
                 <div class="input-group">
-                    <input id="searchCode" type="text" class="form-control" placeholder="ค้นหาเลขทะเบียนตำรับยา" aria-label="เลขทะเบียนตำรับยา" aria-describedby="btnGroupAddon2">
+                    <input id="searchCode1" type="text" class="form-control" maxlength="1" placeholder="" aria-label="" aria-describedby="btnGroupAddon2">
+                    <input id="searchCode2" type="text" class="form-control" maxlength="1" placeholder="" aria-label="" aria-describedby="btnGroupAddon2">
+                    <input id="searchCode3" type="text" class="form-control" maxlength="5" placeholder="" aria-label="" aria-describedby="btnGroupAddon2">
+                    <input id="searchCode4" type="text" value="/"class="form-control" maxlength="1" placeholder="" aria-label="" aria-describedby="btnGroupAddon2" readonly>
+                    <input id="searchCode5" type="text" class="form-control" maxlength="5" placeholder="" aria-label="" aria-describedby="btnGroupAddon2">
                     <div class="input-group-prepend">
                     <div class="input-group-text" id="btnGroupAddon2" style="cursor: pointer;"><i class="fas fa-search"></i></div>
                     </div>
                 </div><br>
 
+                <label class="form-check-label" for="inlineRadio4"></label>
+
+
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="cncnm">สถานะทะเบียน</label>
-                        <input name="cncnm" id="cncnm" class="form-control" type="text">
+                        <input name="cncnm" id="cncnm" class="form-control" type="text" readonly>
                     </div>
                 </div>
 
@@ -87,55 +81,84 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="thadrgnm">ชื่อทางการค้าไทย</label>
-                        <input name="thadrgnm" id="thadrgnm" class="form-control" type="text">
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label for="engdrgnm">ชื่อทางการค้าอังกฤษ</label>
-                        <input name="engdrgnm" id="engdrgnm" class="form-control" type="text">
+                        <input name="thadrgnm" id="thadrgnm" class="form-control" type="text" readonly>
                     </div>
                 </div>
+
+                <center>
+                    <div>
+                        <button type="button" class="btn btn-success">ตรง</button>
+                        <button type="button" class="btn btn-danger">ไม่ตรง</button>        
+                        <button type="button" class="btn btn-warning">ไม่มี</button>
+                    </div>
+                </center><br>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="engdrgnm">ชื่อทางการค้าอังกฤษ</label>
+                        <input name="engdrgnm" id="engdrgnm" class="form-control" type="text" readonly>
+                    </div>
+                </div>
+
+                <center>
+                    <div>
+                        <button type="button" class="btn btn-success">ตรง</button>
+                        <button type="button" class="btn btn-danger">ไม่ตรง</button>        
+                        <button type="button" class="btn btn-warning">ไม่มี</button>
+                    </div>
+                </center><br>
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="ctgthanm">หมวดยา</label>
-                        <input name="ctgthanm" id="ctgthanm" class="form-control"  type="text">
+                        <input name="ctgthanm" id="ctgthanm" class="form-control"  type="text" readonly>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="thadsgnm">รูปแบบยา (ไทย)</label>
-                        <input name="thadsgnm" id="thadsgnm" class="form-control" type="text">
+                        <input name="thadsgnm" id="thadsgnm" class="form-control" type="text" readonly>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="engdsgnm">รูปแบบยา (อังกฤษ)</label>
-                        <input name="engdsgnm" id="engdsgnm" class="form-control" type="text">
+                        <input name="engdsgnm" id="engdsgnm" class="form-control" type="text" readonly>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="thaclassnm">ประเภทของยา</label>
-                        <input name="thaclassnm" id="thaclassnm" class="form-control" type="text">
+                        <input name="thaclassnm" id="thaclassnm" class="form-control" type="text" readonly>
                     </div>
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group col-md-9">
+                    <div class="form-group col-md-6 type-drug">
                         <label for="thakindnm">ประเภทของยาควบคุมตามกฏหมาย</label>
-                        <input name="thakindnm" id="thakindnm" class="form-control" type="text">
+                        <input name="thakindnm" id="thakindnm" class="form-control" type="text" readonly>
                     </div>
 
-                    <div class="form-group col-md-3">
-                            <label for="exampleFormControlFile1">แนปรูปภาพยา</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <div class="form-group col-md-6 attach-img-drug">
+                            <label for="attachImgDrug">แนปรูปภาพยา</label>
+                            <input type="file" class="form-control-file" name="attachImgDrug" id="attachImgDrug" readonly>
                     </div>
                 </div>
+
+                <center>
+                    <div>
+                        <button type="button" class="btn btn-success">ตรง</button>
+                        <button type="button" class="btn btn-danger">ไม่ตรง</button>        
+                        <button type="button" class="btn btn-warning">ไม่มี</button>
+                    </div>
+                </center><br>
+
+
+                
 
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="lcnno_no">เลขที่ใบอนุญาต</label>
-                        <input name="lcnno_no" id="lcnno_no" class="form-control" type="text">
+                        <input name="lcnno_no" id="lcnno_no" class="form-control" type="text" readonly>
                     </div>
                 </div>
 
@@ -200,19 +223,28 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="licen_loca">ชื่อผู้รับอนุญาต </label>
-                        <input name="licen_loca" id="licen_loca" class="form-control" type="text">
+                        <input name="licen_loca" id="licen_loca" class="form-control" type="text" readonly>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="thanm">ชื่อสถานที่</label>
-                        <input name="thanm" id="thanm" class="form-control" type="text">
+                        <input name="thanm" id="thanm" class="form-control" type="text" readonly>
                     </div>
                 </div>
+
+                <center>
+                    <div>
+                        <button type="button" class="btn btn-success">ตรง</button>
+                        <button type="button" class="btn btn-danger">ไม่ตรง</button>        
+                        <button type="button" class="btn btn-warning">ไม่มี</button>
+                    </div>
+                </center><br>
+
 
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="fulladdr">ที่ตั้ง </label>
-                        <textarea name="fulladdr" id="fulladdr" rows="3" class="form-control"></textarea>
+                        <textarea name="fulladdr" id="fulladdr" rows="4" class="form-control" readonly></textarea>
                     </div>
                 </div>
 
@@ -225,7 +257,7 @@
 
                     <div class="form-group col-md-12">
                         <label for="thanm">ชื่อผู้แทนจำหน่าย</label>
-                        <input name="thanm" id="thanm" class="form-control" type="text">
+                        <input name="thanm" id="thanm" class="form-control" type="text" readonly>
                     </div>
                 </div>
 
@@ -280,10 +312,11 @@
     <script>
         $(function(){
             $("#btnGroupAddon2").click(function(){
+                console.log($("#searchCode1").val()+$("#searchCode2").val()+$("#searchCode3").val()+$("#searchCode4").val()+$("#searchCode5").val())
                 $.ajax({
                     method: "POST",
                     url: "pharmacySearchCode.php",
-                    data: { searchCode: $("#searchCode").val() }
+                    data: { searchCode: $("#searchCode1").val()+$("#searchCode2").val()+$("#searchCode3").val()+$("#searchCode4").val()+$("#searchCode5").val() }
                 }).done(function( msg ) {
                     var parser,xmlDoc;
                     parser=new DOMParser();
