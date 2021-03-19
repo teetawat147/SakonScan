@@ -46,21 +46,21 @@
 
                 <div class="form-row">
                     <div class="form-group col-2">
-                        <input name="cncnm" id="cncnm" min="1" class="form-control" type="text">
+                        <input name="" id=""  class="form-control" type="number">
                     </div>
 
                     <div class="form-group col-2">
-                        <input name="cncnm" id="cncnm" class="form-control" type="text">
+                        <input name="" id="" class="form-control" type="text">
                     </div>
 
                     <div class="form-group col-2">
-                        <input name="cncnm" id="cncnm"  class="form-control" type="text">
+                        <input name="" id=""  class="form-control" type="number">
                     </div>
                     <div class="form-group col-2">
-                    <label for=".....">  <h4>/25   <h4></label>
+                    <label for="....."><h4>/25<h4></label>
                     </div>
                     <div class="form-group col-2">
-                        <input name="cncnm" id="cncnm"  class="form-control" type="text">
+                        <input name="" id=""  class="form-control" type="number">
                     </div>
 
                     <div class="form-group col-2"><button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button></div>
