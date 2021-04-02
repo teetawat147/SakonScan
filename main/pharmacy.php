@@ -54,7 +54,20 @@
                             <label class="form-check-label" for="inlineRadio4">ไม่ใช่</label>
                         </div>
                     </div>
-                </div>                       
+                </div>
+
+                <div id="dataDrugSet" class="form-row">   
+                    <div class="form-group col-md-12">
+                        <label for="dataDrugSetId">ทะเบียนยา</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="dataDrugSetId" id="dataDrugSet" value="1" required data-error-msg="กรุณาเลือกข้อมูล">
+                            <label class="form-check-label" for="inlineRadio5">ใช่</label>
+                    
+                            <input style ="margin-left: 30px;" class="form-check-input" type="radio" name="drugSetId" id="drugSet" value="2" required data-error-msg="กรุณาเลือกข้อมูล">
+                            <label class="form-check-label" for="inlineRadio6">ไม่ใช่</label>
+                        </div>
+                    </div>
+                </div>                         
 
                 <div class="input-group">
                     <input id="searchCode1" type="text" class="form-control" maxlength="1" placeholder="" aria-label="" aria-describedby="btnGroupAddon2">
